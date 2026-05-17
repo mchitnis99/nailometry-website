@@ -40,14 +40,22 @@ nav {
 .nav-pill:hover { transform: scale(1.04); background: var(--black); }
 
 /* ── HERO ── */
-.hero { height: 100vh; min-height: 700px; padding-top: 72px; display: grid; grid-template-columns: 52% 48%; position: relative; overflow: hidden; }
+.hero {
+  height: 100vh; min-height: 700px;
+  padding-top: 72px;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  position: relative; overflow: hidden;
+  width: 100%;
+}
 .aura { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; }
 
 .hero-left {
-  padding: 48px 48px 48px 64px;
+  padding: 40px 48px 40px 52px;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; z-index: 1;
   height: 100%;
+  background: var(--cream);
 }
 
 .badge {
@@ -64,25 +72,25 @@ nav {
 /* Big mixed headline */
 .hero-headline { margin-bottom: 20px; line-height: 1; }
 .hero-line-sans {
-  font-family: var(--display); font-size: clamp(52px, 5.5vw, 80px);
+  font-family: var(--display); font-size: clamp(48px, 4.8vw, 88px);
   font-weight: 800; color: var(--black); display: block; line-height: 1;
   letter-spacing: -0.03em;
 }
 .hero-line-script {
-  font-family: var(--script); font-size: clamp(72px, 7.5vw, 110px);
-  color: var(--pink-hot); display: block; line-height: 1;
-  margin-top: -8px; margin-bottom: -4px;
+  font-family: var(--script); font-size: clamp(72px, 7vw, 128px);
+  color: var(--pink-hot); display: block; line-height: 1.05;
+  margin-top: -4px;
 }
 .hero-line-outline {
-  font-family: var(--display); font-size: clamp(52px, 5.5vw, 80px);
+  font-family: var(--display); font-size: clamp(48px, 4.8vw, 88px);
   font-weight: 800; display: block; line-height: 1;
   -webkit-text-stroke: 2.5px var(--black); color: transparent;
   letter-spacing: -0.03em;
 }
 
 .hero-sub {
-  font-size: 16px; line-height: 1.65; color: #5A5250;
-  max-width: 420px; margin-bottom: 32px; margin-top: 20px;
+  font-size: 17px; line-height: 1.65; color: #5A5250;
+  max-width: 480px; margin-bottom: 36px; margin-top: 24px;
 }
 .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .btn-hot {
@@ -243,20 +251,30 @@ footer { background: #080706; padding: 40px 64px; display: flex; align-items: ce
   <div class="aura" style="width:300px;height:300px;background:rgba(217,196,240,0.16);bottom:60px;left:240px;"></div>
 
   <div class="hero-left">
-    <div class="badge"><span class="badge-dot"></span>AI-Powered Sizing</div>
+    <!-- Top decorative elements to fill space -->
+    <div style="position:absolute;top:32px;right:40px;font-family:'Great Vibes',cursive;font-size:32px;color:var(--pink-hot);opacity:0.4;z-index:0;">✦</div>
+    <div style="position:absolute;top:80px;left:52px;width:48px;height:48px;border:2px solid rgba(232,71,138,0.15);border-radius:50%;z-index:0;"></div>
+    <div style="position:absolute;top:100px;left:76px;width:24px;height:24px;border:1.5px solid rgba(232,71,138,0.2);border-radius:50%;z-index:0;"></div>
+    <!-- Bottom watermark -->
+    <div style="position:absolute;bottom:-30px;right:-10px;font-family:'Great Vibes',cursive;font-size:180px;color:rgba(232,71,138,0.05);line-height:1;pointer-events:none;z-index:0;white-space:nowrap;">nails</div>
 
-    <div class="hero-headline">
+    <div class="badge" style="position:relative;z-index:1;"><span class="badge-dot"></span>AI-Powered Sizing</div>
+
+    <div class="hero-headline" style="position:relative;z-index:1;margin-bottom:20px;">
       <span class="hero-line-sans">Nails that</span>
       <span class="hero-line-script">actually</span>
       <span class="hero-line-outline">fit you.</span>
     </div>
 
-    <p class="hero-sub">Upload a pic of your hand, get your exact nail measurements in 10 seconds. No more lifting, pinching, or guessing which size to order.</p>
+    <p class="hero-sub" style="position:relative;z-index:1;">Upload a pic of your hand, get your exact nail measurements in 10 seconds. No more lifting, pinching, or guessing which size to order.</p>
 
-    <div class="hero-actions">
+    <div class="hero-actions" style="position:relative;z-index:1;">
       <a href="#cta" class="btn-hot">Find My Size →</a>
       <a href="#how" class="btn-ghost">See How ↓</a>
     </div>
+
+    <!-- Bottom decorative line -->
+    <div style="position:absolute;bottom:40px;left:52px;right:48px;height:1px;background:linear-gradient(to right, rgba(232,71,138,0.15), transparent);z-index:0;"></div>
   </div>
 
   <div class="hero-right">
