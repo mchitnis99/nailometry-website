@@ -41,8 +41,8 @@ nav {
 
 /* ── HERO ── */
 .hero {
-  height: 100vh; min-height: 700px;
-  padding-top: 72px;
+  height: calc(100vh - 72px);
+  min-height: 600px;
   display: grid;
   grid-template-columns: 45% 55%;
   position: relative; overflow: hidden;
@@ -54,7 +54,6 @@ nav {
   padding: 40px 48px 40px 52px;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; z-index: 1;
-  height: 100%;
   background: var(--cream);
 }
 
@@ -113,8 +112,8 @@ nav {
 .btn-ghost:hover { background: var(--black); color: white; }
 
 /* Hero right grid */
-.hero-right { background: var(--black); position: relative; overflow: hidden; display: flex; flex-direction: column; height: 100%; }
-.hero-photo-grid { flex: 1; display: grid; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3px; height: 100%; }
+.hero-right { background: var(--black); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.hero-photo-grid { flex: 1; display: grid; grid-template-rows: 1fr 1fr; grid-template-columns: 1fr 1fr; gap: 3px; }
 .photo-cell { overflow: hidden; position: relative; background: #161210; display: flex; align-items: center; justify-content: center; }
 .float-tag {
   position: absolute; background: white; border-radius: 14px;
