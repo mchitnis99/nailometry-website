@@ -44,17 +44,19 @@ nav {
   height: calc(100vh - 72px);
   min-height: 600px;
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 40% 60%;
   position: relative; overflow: hidden;
   width: 100%;
+  gap: 0;
 }
 .aura { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: 0; }
 
 .hero-left {
-  padding: 40px 48px 40px 52px;
+  padding: 40px 40px 40px 48px;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; z-index: 1;
   background: var(--cream);
+  border-right: none;
 }
 
 .badge {
@@ -71,17 +73,17 @@ nav {
 /* Big mixed headline */
 .hero-headline { margin-bottom: 20px; line-height: 1; }
 .hero-line-sans {
-  font-family: var(--display); font-size: clamp(48px, 4.8vw, 88px);
+  font-family: var(--display); font-size: clamp(52px, 5.2vw, 92px);
   font-weight: 800; color: var(--black); display: block; line-height: 1;
   letter-spacing: -0.03em;
 }
 .hero-line-script {
-  font-family: var(--script); font-size: clamp(72px, 7vw, 128px);
+  font-family: var(--script); font-size: clamp(76px, 7.8vw, 136px);
   color: var(--pink-hot); display: block; line-height: 1.05;
   margin-top: -4px;
 }
 .hero-line-outline {
-  font-family: var(--display); font-size: clamp(48px, 4.8vw, 88px);
+  font-family: var(--display); font-size: clamp(52px, 5.2vw, 92px);
   font-weight: 800; display: block; line-height: 1;
   -webkit-text-stroke: 2.5px var(--black); color: transparent;
   letter-spacing: -0.03em;
